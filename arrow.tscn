@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://kehwy27br6q2"]
+
+[ext_resource type="ArrayMesh" uid="uid://doe8m23nla4as" path="res://arrow.tres" id="1_gq0b3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fqti3"]
+size = Vector3(0.013125, 0.883133, 0.0146318)
+
+[node name="Arrow" type="RigidBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fqti3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12429e-09, 0.0943527, 0)
+mesh = ExtResource("1_gq0b3")
