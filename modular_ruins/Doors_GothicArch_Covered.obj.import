@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddpwdefeevqh1"
+path="res://.godot/imported/Doors_GothicArch_Covered.obj-e9c557639dab04109a5c38186315edfc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Doors_GothicArch_Covered.obj-e9c557639dab04109a5c38186315edfc.mesh"]
+
+source_file="res://modular_ruins/Doors_GothicArch_Covered.obj"
+dest_files=["res://.godot/imported/Doors_GothicArch_Covered.obj-e9c557639dab04109a5c38186315edfc.mesh", "res://.godot/imported/Doors_GothicArch_Covered.obj-e9c557639dab04109a5c38186315edfc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

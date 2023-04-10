@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b80o57kf1fd6q"]
+
+[ext_resource type="PackedScene" uid="uid://cigmvus0dmlis" path="res://dungeon_pieces/wall.tscn" id="2_5msel"]
+[ext_resource type="PackedScene" uid="uid://cv3aoem2v40ea" path="res://dungeon_pieces/torch.tscn" id="2_i0vyr"]
+
+[node name="WallWithTorch" type="Node3D"]
+
+[node name="Wall" parent="." instance=ExtResource("2_5msel")]
+
+[node name="Torch" parent="." instance=ExtResource("2_i0vyr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.9, -0.5)

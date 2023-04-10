@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkwn542d6clex"
+path="res://.godot/imported/Pot1_Broken.obj-e1bf2a84bb45fb29f100a999b85b0e5b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pot1_Broken.obj-e1bf2a84bb45fb29f100a999b85b0e5b.mesh"]
+
+source_file="res://modular_ruins/Pot1_Broken.obj"
+dest_files=["res://.godot/imported/Pot1_Broken.obj-e1bf2a84bb45fb29f100a999b85b0e5b.mesh", "res://.godot/imported/Pot1_Broken.obj-e1bf2a84bb45fb29f100a999b85b0e5b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

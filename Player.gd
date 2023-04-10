@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 # How fast the player moves in meters per second.
-@export var speed = 14
+@export var speed = 7
 # The downward acceleration when in the air, in meters per second squared.
 @export var fall_acceleration = 75
 
@@ -18,7 +18,6 @@ var animation_player
 func _ready():
 	animation_player = $Pivot/warrior/AnimationPlayer
 	attack_speed_scale = 1 / (ATTACK_DURATION / animation_player.get_animation("Sword_Slash").length)
-	print(attack_speed_scale)
 
 func _physics_process(delta):
 	# We create a local variable to store the input direction.

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv3aoem2v40ea"]
+
+[ext_resource type="ArrayMesh" uid="uid://ct25x0fg7b0m8" path="res://modular_ruins/Torch.obj" id="1_kjank"]
+
+[node name="Torch" type="MeshInstance3D"]
+mesh = ExtResource("1_kjank")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.438111, 0)
+light_color = Color(1, 0.717647, 0.0431373, 1)
+light_energy = 10.0

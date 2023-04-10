@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jf15j182ikxb"
+path="res://.godot/imported/BridgeSection.obj-f770751a7af5dfbba8811a43965ecbd3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BridgeSection.obj-f770751a7af5dfbba8811a43965ecbd3.mesh"]
+
+source_file="res://modular_ruins/BridgeSection.obj"
+dest_files=["res://.godot/imported/BridgeSection.obj-f770751a7af5dfbba8811a43965ecbd3.mesh", "res://.godot/imported/BridgeSection.obj-f770751a7af5dfbba8811a43965ecbd3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

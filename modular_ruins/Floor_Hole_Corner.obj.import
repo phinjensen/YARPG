@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dv1kf0c6lufh1"
+path="res://.godot/imported/Floor_Hole_Corner.obj-a5b1c0d87d619c6f0e35d9d3858344c9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Floor_Hole_Corner.obj-a5b1c0d87d619c6f0e35d9d3858344c9.mesh"]
+
+source_file="res://modular_ruins/Floor_Hole_Corner.obj"
+dest_files=["res://.godot/imported/Floor_Hole_Corner.obj-a5b1c0d87d619c6f0e35d9d3858344c9.mesh", "res://.godot/imported/Floor_Hole_Corner.obj-a5b1c0d87d619c6f0e35d9d3858344c9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

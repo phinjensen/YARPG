@@ -3,8 +3,7 @@
 [ext_resource type="Script" path="res://Player.gd" id="1_w3cbx"]
 [ext_resource type="PackedScene" uid="uid://jcpxpm4dj36o" path="res://warrior.tscn" id="2_j0rtx"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_q1b8p"]
-radius = 0.937734
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_taqyo"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_w3cbx")
@@ -12,8 +11,8 @@ script = ExtResource("1_w3cbx")
 [node name="Pivot" type="Node3D" parent="."]
 
 [node name="warrior" parent="Pivot" instance=ExtResource("2_j0rtx")]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0, 0)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.935043, 0)
-shape = SubResource("SphereShape3D_q1b8p")
+shape = SubResource("CapsuleShape3D_taqyo")

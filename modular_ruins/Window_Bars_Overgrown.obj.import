@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bx018shhw41xn"
+path="res://.godot/imported/Window_Bars_Overgrown.obj-363407b5b2d3090de21439263a365458.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Window_Bars_Overgrown.obj-363407b5b2d3090de21439263a365458.mesh"]
+
+source_file="res://modular_ruins/Window_Bars_Overgrown.obj"
+dest_files=["res://.godot/imported/Window_Bars_Overgrown.obj-363407b5b2d3090de21439263a365458.mesh", "res://.godot/imported/Window_Bars_Overgrown.obj-363407b5b2d3090de21439263a365458.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

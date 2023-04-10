@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ci2hjrx70ejo"
+path="res://.godot/imported/Wall_Double_Broken.obj-533bb91b65fe92dff9d12bac7ac401ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Double_Broken.obj-533bb91b65fe92dff9d12bac7ac401ab.mesh"]
+
+source_file="res://modular_ruins/Wall_Double_Broken.obj"
+dest_files=["res://.godot/imported/Wall_Double_Broken.obj-533bb91b65fe92dff9d12bac7ac401ab.mesh", "res://.godot/imported/Wall_Double_Broken.obj-533bb91b65fe92dff9d12bac7ac401ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

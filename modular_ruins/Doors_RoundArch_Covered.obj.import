@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1o4xg0f07ei3"
+path="res://.godot/imported/Doors_RoundArch_Covered.obj-0cf9b37bf9db6b24593f00997b90e4af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Doors_RoundArch_Covered.obj-0cf9b37bf9db6b24593f00997b90e4af.mesh"]
+
+source_file="res://modular_ruins/Doors_RoundArch_Covered.obj"
+dest_files=["res://.godot/imported/Doors_RoundArch_Covered.obj-0cf9b37bf9db6b24593f00997b90e4af.mesh", "res://.godot/imported/Doors_RoundArch_Covered.obj-0cf9b37bf9db6b24593f00997b90e4af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

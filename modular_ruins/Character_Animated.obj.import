@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bupewlbc2e72i"
+path="res://.godot/imported/Character_Animated.obj-ac0dceca0a0b46bc6b9e11d5f21152c3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Character_Animated.obj-ac0dceca0a0b46bc6b9e11d5f21152c3.mesh"]
+
+source_file="res://modular_ruins/Character_Animated.obj"
+dest_files=["res://.godot/imported/Character_Animated.obj-ac0dceca0a0b46bc6b9e11d5f21152c3.mesh", "res://.godot/imported/Character_Animated.obj-ac0dceca0a0b46bc6b9e11d5f21152c3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

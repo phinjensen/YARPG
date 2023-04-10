@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://br4w454708s30"
+path="res://.godot/imported/Arch_Gothic_RoundColumn.obj-b4b2cdccf30806bbcf816defb0196996.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Arch_Gothic_RoundColumn.obj-b4b2cdccf30806bbcf816defb0196996.mesh"]
+
+source_file="res://modular_ruins/Arch_Gothic_RoundColumn.obj"
+dest_files=["res://.godot/imported/Arch_Gothic_RoundColumn.obj-b4b2cdccf30806bbcf816defb0196996.mesh", "res://.godot/imported/Arch_Gothic_RoundColumn.obj-b4b2cdccf30806bbcf816defb0196996.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

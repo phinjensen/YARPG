@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dj4mta266tg0y"
+path="res://.godot/imported/Wall_ArchRound_Overgrown.obj-691fc588f84f1bf26111090e857dfb2c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_ArchRound_Overgrown.obj-691fc588f84f1bf26111090e857dfb2c.mesh"]
+
+source_file="res://modular_ruins/Wall_ArchRound_Overgrown.obj"
+dest_files=["res://.godot/imported/Wall_ArchRound_Overgrown.obj-691fc588f84f1bf26111090e857dfb2c.mesh", "res://.godot/imported/Wall_ArchRound_Overgrown.obj-691fc588f84f1bf26111090e857dfb2c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

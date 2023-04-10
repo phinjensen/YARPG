@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cunje1pwan584"
+path="res://.godot/imported/Column_Round_Short.obj-7d286004a9ef6cde05466183dfb3fe2c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Column_Round_Short.obj-7d286004a9ef6cde05466183dfb3fe2c.mesh"]
+
+source_file="res://modular_ruins/Column_Round_Short.obj"
+dest_files=["res://.godot/imported/Column_Round_Short.obj-7d286004a9ef6cde05466183dfb3fe2c.mesh", "res://.godot/imported/Column_Round_Short.obj-7d286004a9ef6cde05466183dfb3fe2c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

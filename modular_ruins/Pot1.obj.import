@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crf7p5od5iim6"
+path="res://.godot/imported/Pot1.obj-1c4fa88dfc63a8d1dae3d55ed9c21745.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pot1.obj-1c4fa88dfc63a8d1dae3d55ed9c21745.mesh"]
+
+source_file="res://modular_ruins/Pot1.obj"
+dest_files=["res://.godot/imported/Pot1.obj-1c4fa88dfc63a8d1dae3d55ed9c21745.mesh", "res://.godot/imported/Pot1.obj-1c4fa88dfc63a8d1dae3d55ed9c21745.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
