@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
 # How fast the player moves in meters per second.
-@export var speed = 7
-# The downward acceleration when in the air, in meters per second squared.
-@export var fall_acceleration = 75
+@export var SPEED = 7
+
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+@onready var nav_agent = $NavigationAgent3D
 
 var ATTACK_DURATION = 0.75
 
@@ -19,10 +21,7 @@ func _ready():
 	animation_player = $Pivot/warrior/AnimationPlayer
 	attack_speed_scale = 1 / (ATTACK_DURATION / animation_player.get_animation("Sword_Slash").length)
 
-func _physics_process(delta):
-	# We create a local variable to store the input direction.
-	var direction = Vector3.ZERO
-	
+func _physics_process(delta):	
 	if attacking:
 		if attack_time < ATTACK_DURATION:
 			attack_time += delta
@@ -31,41 +30,32 @@ func _physics_process(delta):
 			attack_time = 0
 			animation_player.speed_scale = 1.0
 		return
+	
+	#if Input.is_action_just_pressed("movement"):
+	#	var space_state = get_world_3d().direct_space_state
+	#	var query = PhysicsRayQueryParameters3D.create()
 		
-	if Input.is_action_just_pressed("basic_attack"):
-		print("basic attack")
-		if not attacking:
-			attacking = true
-			animation_player.current_animation = "Sword_Slash"
-			animation_player.speed_scale = attack_speed_scale
-		return
+	#if Input.is_action_just_pressed("basic_attack"):
+	#	if not attacking:
+	#		attacking = true
+	#		animation_player.current_animation = "Sword_Slash"
+	#		animation_player.speed_scale = attack_speed_scale
+	#	return
 
-	# We check for each move input and update the direction accordingly.
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
-	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
-	if Input.is_action_pressed("move_back"):
-		# Notice how we are working with the vector's x and z axes.
-		# In 3D, the XZ plane is the ground plane.
-		direction.z += 1
-	if Input.is_action_pressed("move_forward"):
-		direction.z -= 1
+	var current_position = global_transform.origin
+	var next_position = nav_agent.get_next_path_position()
+	var new_velocity = (next_position - current_position).normalized() * SPEED
+	
+	velocity = new_velocity
+	
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
+	print(nav_agent.target_position, nav_agent.distance_to_target(), nav_agent.is_target_reached())
+	if velocity != Vector3.ZERO and not nav_agent.is_target_reached():
+		var direction = velocity.normalized()
 		$Pivot.look_at(position + direction, Vector3.UP)
-
-	# Ground Velocity
-	target_velocity.x = direction.x * speed
-	target_velocity.z = direction.z * speed
-
-	# Vertical Velocity
-	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
-		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-
-	# Moving the Character
-	velocity = target_velocity
 	
 	var animation = "Idle_Sword"
 	if velocity.x or velocity.z:
@@ -73,3 +63,6 @@ func _physics_process(delta):
 	animation_player.current_animation = animation
 	
 	move_and_slide()
+
+func _on_command_player(position):
+	nav_agent.set_target_position(position)

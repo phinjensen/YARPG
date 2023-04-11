@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr3pv0c5ktwr1"
-path.s3tc="res://.godot/imported/enemy_head-texture.png-9e7f8829ae9bd32567fd647c0e3e164c.s3tc.ctex"
+path.etc2="res://.godot/imported/enemy_head-texture.png-9e7f8829ae9bd32567fd647c0e3e164c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +13,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://enemy_head-texture.png"
-dest_files=["res://.godot/imported/enemy_head-texture.png-9e7f8829ae9bd32567fd647c0e3e164c.s3tc.ctex"]
+dest_files=["res://.godot/imported/enemy_head-texture.png-9e7f8829ae9bd32567fd647c0e3e164c.etc2.ctex"]
 
 [params]
 

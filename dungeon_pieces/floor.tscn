@@ -1,15 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj0gdtqcoerhf"]
+[gd_scene load_steps=4 format=3 uid="uid://dj0gdtqcoerhf"]
 
 [ext_resource type="ArrayMesh" uid="uid://clmgbgx2sbm4j" path="res://modular_ruins/Floor_Standard.obj" id="1_2686d"]
+[ext_resource type="Script" path="res://dungeon_pieces/floor.gd" id="2_xtnwn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j1ixu"]
 size = Vector3(1.99899, 0.290921, 1.98603)
 
 [node name="Floor" type="MeshInstance3D" groups=["floor"]]
 mesh = ExtResource("1_2686d")
+script = ExtResource("2_xtnwn")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.109996, -0.00191712)
 shape = SubResource("BoxShape3D_j1ixu")
+
+[connection signal="input_event" from="StaticBody3D" to="." method="_on_static_body_3d_input_event"]

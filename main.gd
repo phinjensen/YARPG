@@ -1,5 +1,6 @@
 extends Node
 
+
 var ZOOM_FACTOR = 3
 
 @onready var camera = $Camera
@@ -8,7 +9,9 @@ var ZOOM_FACTOR = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	world.rotate_y(90)
+	for floor_piece in get_tree().get_nodes_in_group("floor"):
+		floor_piece.command_player.connect($Player._on_command_player)
+	world.rotate_y(45)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
