@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_j1ixu"]
 size = Vector3(1.99899, 0.290921, 1.98603)
 
-[node name="Floor" type="MeshInstance3D"]
+[node name="Floor" type="MeshInstance3D" groups=["floor"]]
 mesh = ExtResource("1_2686d")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
