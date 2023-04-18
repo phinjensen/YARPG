@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3xn8o7eu6vyr"
-path.etc2="res://.godot/imported/enemy_overalls.png-738e1d01bfbd05f1046241acb87e651f.etc2.ctex"
+path.s3tc="res://.godot/imported/enemy_overalls.png-738e1d01bfbd05f1046241acb87e651f.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +13,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://enemy_overalls.png"
-dest_files=["res://.godot/imported/enemy_overalls.png-738e1d01bfbd05f1046241acb87e651f.etc2.ctex"]
+dest_files=["res://.godot/imported/enemy_overalls.png-738e1d01bfbd05f1046241acb87e651f.s3tc.ctex"]
 
 [params]
 
