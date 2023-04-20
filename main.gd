@@ -11,6 +11,7 @@ var ZOOM_FACTOR = 3
 func _ready():
 	for floor_piece in get_tree().get_nodes_in_group("floor"):
 		floor_piece.command_player.connect($Player._on_command_player)
+	$World/Enemy.player_attack.connect($Player._on_player_attack)
 	world.rotate_y(45)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
