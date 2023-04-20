@@ -13,5 +13,5 @@ func _process(delta):
 
 
 func _on_static_body_3d_input_event(camera, event, position, normal, shape_idx):
-	if event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.pressed:
 		emit_signal("command_player", position)

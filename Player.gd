@@ -14,12 +14,14 @@ var target_velocity = Vector3.ZERO
 var attacking = false
 var attack_time = 0
 var attack_speed_scale
+var attack_hit = false
 
 var animation_player
 
-var MAX_HEALTH = 1000
+var MAX_HEALTH = 1000.0
 var health = MAX_HEALTH
 @onready var target_enemy = null
+var ATTACK_RANGE = 1.5
 
 func _ready():
 	animation_player = $Pivot/warrior/AnimationPlayer
@@ -30,19 +32,24 @@ func _physics_process(delta):
 	
 	if attacking:
 		animation_player.current_animation = "Sword_Slash"
+		var collisions = $Pivot/warrior/CharacterArmature/Skeleton3D/Sword/SwordBody.get_colliding_bodies()
+		if collisions and not attack_hit:
+			attack_hit = true
+			collisions[0].hit(50)
 		if attack_time < ATTACK_DURATION:
 			attack_time += delta
 		else:
 			attacking = false
+			attack_hit = false
 			attack_time = 0
 			animation_player.speed_scale = 1.0
 		return
 
 	if target_enemy:
-		if not nav_agent.is_target_reached():
-			nav_agent.set_target_position(target_enemy.global_transform.origin)
-		else:
+		if nav_agent.distance_to_target() < ATTACK_RANGE:
 			attacking = true
+		elif not nav_agent.is_target_reached():
+			nav_agent.set_target_position(target_enemy.global_transform.origin)
 	var next_position = nav_agent.get_next_path_position()
 	var animation
 	if nav_agent.target_position == Vector3.ZERO or nav_agent.is_target_reached():

@@ -5,22 +5,22 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_taqyo"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm8o8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42tri"]
 cull_mode = 2
 shading_mode = 0
 albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_hepww"]
-material = SubResource("StandardMaterial3D_mm8o8")
+material = SubResource("StandardMaterial3D_42tri")
 size = Vector2(1.7, 0.1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcglc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_urxfb"]
 cull_mode = 2
 shading_mode = 0
 albedo_color = Color(0, 1, 0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_4yvd2"]
-material = SubResource("StandardMaterial3D_fcglc")
+material = SubResource("StandardMaterial3D_urxfb")
 size = Vector2(1.7, 0.1)
 
 [node name="Player" type="CharacterBody3D"]
