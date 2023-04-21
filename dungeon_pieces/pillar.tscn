@@ -12,6 +12,7 @@ height = 3.31496
 mesh = ExtResource("2_l8mg4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Pillar"]
+collision_layer = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65565, 0)

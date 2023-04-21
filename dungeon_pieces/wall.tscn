@@ -9,6 +9,7 @@ size = Vector3(2.00376, 1.98762, 0.283652)
 mesh = ExtResource("1_q6qy5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.996638, -0.117093)

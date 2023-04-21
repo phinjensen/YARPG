@@ -74,6 +74,11 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+func hit(damage):
+	health -= damage
+	if health <= 0:
+		queue_free()
+
 func _on_command_player(position):
 	target_enemy = null
 	nav_agent.set_target_position(position)

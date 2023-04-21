@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://jcpxpm4dj36o" path="res://warrior.tscn" id="2_j0rtx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_taqyo"]
+radius = 0.286977
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42tri"]
 cull_mode = 2
@@ -24,6 +25,7 @@ material = SubResource("StandardMaterial3D_urxfb")
 size = Vector2(1.7, 0.1)
 
 [node name="Player" type="CharacterBody3D"]
+collision_mask = 5
 script = ExtResource("1_w3cbx")
 
 [node name="Pivot" type="Node3D" parent="."]
@@ -32,7 +34,7 @@ script = ExtResource("1_w3cbx")
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.935043, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.935043, -0.0724152)
 shape = SubResource("CapsuleShape3D_taqyo")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

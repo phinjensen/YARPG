@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Squash the Creeps (3D)"
+config/name="YAARPG"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
@@ -66,6 +66,13 @@ movement={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(112, 19),"global_position":Vector2(116, 62),"factor":1.0,"button_index":2,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="player"
+3d_physics/layer_2="enemy"
+3d_physics/layer_3="environment"
+3d_physics/layer_4="fireball"
 
 [rendering]
 

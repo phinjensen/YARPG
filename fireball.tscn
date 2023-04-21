@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4okyjl4ckd5v"]
+
+[ext_resource type="Script" path="res://fireball.gd" id="1_o0gja"]
+
+[sub_resource type="Gradient" id="Gradient_0h3cm"]
+offsets = PackedFloat32Array(0, 0.408451, 0.757746)
+colors = PackedColorArray(0, 0, 0, 1, 0.884507, 0.884507, 0.884507, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_njha2"]
+noise_type = 3
+seed = 5
+frequency = 0.039
+offset = Vector3(0.12, 0.19, 0)
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yo3rx"]
+bump_strength = 13.7
+color_ramp = SubResource("Gradient_0h3cm")
+noise = SubResource("FastNoiseLite_njha2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4bfp"]
+albedo_color = Color(1, 0.215686, 0.0823529, 1)
+albedo_texture = SubResource("NoiseTexture2D_yo3rx")
+
+[sub_resource type="SphereMesh" id="SphereMesh_olvyc"]
+material = SubResource("StandardMaterial3D_r4bfp")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4rj4u"]
+
+[node name="Fireball" type="StaticBody3D"]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_o0gja")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_olvyc")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.239216, 0, 1)
+omni_range = 1.586
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_4rj4u")
