@@ -10,15 +10,23 @@ var ZOOM_FACTOR = 3
 func _ready():
 	for floor_piece in get_tree().get_nodes_in_group("floor"):
 		floor_piece.command_player.connect($Player._on_command_player)
-	$World/Enemy.player_attack.connect($Player._on_player_attack)
-	$World/Enemy.fireball.connect(create_fireball)
 	world.rotate_y(45)
+
+func spawn_enemy(origin):
+	var enemy = load("res://enemy.tscn")
+	var instance = enemy.instantiate()
+	add_child(instance)
+	instance.position = origin
+	instance.player_attack.connect($Player._on_player_attack)
+	instance.fireball.connect(create_fireball)
 
 func create_fireball(origin, target):
 	var attack = load("res://fireball.tscn").instantiate()
 	add_child(attack)
 	attack.initialize(origin, target)
-	
+
+var _last_spawn_point = null
+var enemies_to_spawn = 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -27,6 +35,15 @@ func _physics_process(delta):
 		"update_target_position",
 		player.global_transform.origin
 	)
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	if enemies.size() == 0:
+		var verts = $World/NavigationRegion3D.navigation_mesh.get_vertices()
+		for i in range(enemies_to_spawn):
+			var spawn_point = verts[randi() % verts.size()]
+			while spawn_point == _last_spawn_point:
+				spawn_point = verts[randi() % verts.size()]
+			spawn_enemy(spawn_point)
+		enemies_to_spawn += 1
 	
 	var camera_position = Vector3(
 		$Player.position.x,

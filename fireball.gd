@@ -12,8 +12,8 @@ func _physics_process(delta):
 	var collisions = move_and_collide(delta * direction * 4)
 	if collisions:
 		var collider = collisions.get_collider()
-		#if collider.has_method("hit"):
-		#	collider.hit(100)
+		if collider.has_method("hit"):
+			collider.hit(100)
 		queue_free()
 
 
